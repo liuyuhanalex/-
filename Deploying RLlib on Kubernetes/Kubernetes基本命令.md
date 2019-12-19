@@ -1,5 +1,5 @@
 # Kubernetes集群的链接及验证
-- 腾讯云集群链接官方说明![官网](https://cloud.tencent.com/document/product/457/8438)
+- 腾讯云集群链接官方说明 [官网链接](https://cloud.tencent.com/document/product/457/8438)
 - 配置本地的链接校验证书
   * kubectl config set-credentials default-admin --username=**username** --password=**password**
   * kubectl config set-cluster default-cluster --server=**server** --certificate-authority=**authortiy address**
@@ -11,4 +11,4 @@
   * 从本地拷贝文件到pod kubectl -n ray cp **local_address** **pod_name**:/**address**
 - 启动ray服务
   * head: ray start --head
-  * worker: ray start --block --redis-address "${RAY_HEAD_SVC}":"${REDIS_PORT}" --object-manager-port "${OBJECT_MANAGER_PORT}" --node-manager-port "${NODE_MANAGER_PORT}"
+  * worker: ray start --block --redis-address "${**RAY_HEAD_SVC**}":"${**REDIS_PORT**}" --object-manager-port "${**OBJECT_MANAGER_PORT**}" --node-manager-port "${**NODE_MANAGER_PORT**}"
